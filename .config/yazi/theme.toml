@@ -1,0 +1,38 @@
+[flavor]
+dark = "flexoki-dark"
+
+[status]
+overall = { fg = "#EAEAEA", bg = "#212121" } # matteblack fg1, bg3
+sep_left = {
+  open = "",
+  close = "\ue0b0",
+}
+sep_right = {
+  open = "\ue0b2",
+  close = "",
+}
+
+progress_label  = { fg = "#121212" }
+progress_normal = { fg = "#10B981", bg = "#212121" }
+progress_error  = { bg = "#DC2626" }
+
+[mode]
+# Normal mode — matteblack lualine normal a (orange)
+normal_main = { fg = "#121212", bg = "#F59E0B", bold = true }
+normal_alt  = { fg = "#EAEAEA", bg = "#1A1A1A" }
+
+# Select mode — matteblack lualine visual a (magenta)
+select_main = { fg = "#121212", bg = "#B027DE", bold = true }
+select_alt  = { fg = "#EAEAEA", bg = "#1A1A1A" }
+
+# Unset mode — matteblack lualine replace a (crimson)
+unset_main  = { fg = "#121212", bg = "#DC2626", bold = true }
+unset_alt   = { fg = "#EAEAEA", bg = "#1A1A1A" }
+
+[tabs]
+# Active tab — matteblack TabLineSel
+active   = { fg = "#EAEAEA", bg = "#333333", bold = true }
+# Inactive tabs — matteblack TabLine
+inactive = { fg = "#8A8A8D", bg = "#121212" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
