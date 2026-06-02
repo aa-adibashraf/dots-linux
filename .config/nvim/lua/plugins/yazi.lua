@@ -1,12 +1,11 @@
 return {
   "mikavilpas/yazi.nvim",
-  version = "*", -- use the latest stable version
-  event = "VeryLazy",
+  version = "*",
+  lazy = false,
   dependencies = {
     { "nvim-lua/plenary.nvim", lazy = true },
   },
   keys = {
-    -- 👇 in this section, choose your own keymappings!
     {
       "<leader>e",
       mode = { "n", "v" },
@@ -14,7 +13,6 @@ return {
       desc = "Open yazi at the current file",
     },
     {
-      -- Open in the current working directory
       "<leader>E",
       "<cmd>Yazi cwd<cr>",
       desc = "Open the file manager in nvim's working directory",
@@ -27,17 +25,21 @@ return {
   },
   ---@type YaziConfig | {}
   opts = {
-    -- if you want to open yazi instead of netrw, see below for more info
-    open_for_directories = false,
+    open_for_directories = true,
     keymaps = {
       show_help = "<f1>",
     },
+    hooks = {
+      yazi_closed_successfully = function()
+        -- After yazi closes from an auto-opened directory, restore the dashboard
+        local buf = vim.api.nvim_get_current_buf()
+        if vim.api.nvim_buf_get_name(buf) == "" then
+          require("snacks").dashboard()
+        end
+      end,
+    },
   },
-  -- 👇 if you use `open_for_directories=true`, this is recommended
   init = function()
-    -- mark netrw as loaded so it's not loaded at all.
-    --
-    -- More details: https://github.com/mikavilpas/yazi.nvim/issues/802
     vim.g.loaded_netrwPlugin = 1
   end,
 }

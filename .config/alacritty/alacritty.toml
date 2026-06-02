@@ -10,9 +10,9 @@ osc52 = "CopyPaste"
 program = "zsh"
 
 [font]
-normal = { family = "Zenbones Brainy" }
-bold = { family = "Zenbones Brainy" }
-italic = { family = "Zenbones Brainy" }
+normal = { family = "Ioskeley Mono Nerd Font" }
+bold = { family = "Ioskeley Mono Nerd Font" }
+italic = { family = "Ioskeley Mono Nerd Font" }
 size = 14
 
 [window]

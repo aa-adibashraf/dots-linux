@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vicinae.com/schemas/config.json",
+  "search_files_in_root": true,
+  "font": {
+    "rendering": "native",
+    "normal": {}
+  },
+  "theme": {
+    "dark": {
+      "name": "solid-contrast",
+      "icon_theme": "Yaru-sage"
+    }
+  },
+  "telemetry": {
+    "system_info": false
+  },
+  "launcher_window": {
+    "opacity": 0.35,
+    "client_side_decorations": {
+      "enabled": true,
+      "rounding": 0,
+      "border_width": 2
+    },
+    "blur": {
+      "enabled": true
+    }
+  },
+  "providers": {
+    "browser-extension": {
+      "entrypoints": {
+        "browse-tabs": {
+          "alias": "ht"
+        }
+      }
+    }
+  }
+}
