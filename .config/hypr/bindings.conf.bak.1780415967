@@ -1,0 +1,79 @@
+# Application bindings
+unbind = ALT SHIFT, L
+bindd = SUPER, RETURN, Terminal, exec, uwsm-app -- xdg-terminal-exec --dir="$(omarchy-cmd-terminal-cwd)"
+bindd = SUPER ALT, RETURN, Tmux, exec, uwsm-app -- xdg-terminal-exec --dir="$(omarchy-cmd-terminal-cwd)" bash -c "tmux attach || tmux new -s Work"
+bindd = SUPER SHIFT, RETURN, Browser, exec, omarchy-launch-browser
+bindd = SUPER SHIFT, F, File manager, exec, uwsm-app -- nautilus --new-window
+bindd = SUPER ALT SHIFT, F, File manager (cwd), exec, uwsm-app -- nautilus --new-window "$(omarchy-cmd-terminal-cwd)"
+bindd = SUPER SHIFT, B, Browser, exec, omarchy-launch-browser
+bindd = SUPER SHIFT ALT, B, Browser (private), exec, omarchy-launch-browser --private
+bindd = SUPER SHIFT, M, Music, exec, omarchy-launch-or-focus spotify
+bindd = SUPER SHIFT ALT, M, Music TUI, exec, omarchy-launch-or-focus-tui cliamp
+bindd = SUPER SHIFT, N, Editor, exec, omarchy-launch-editor
+bindd = SUPER SHIFT, D, Docker, exec, omarchy-launch-tui lazydocker
+bindd = SUPER SHIFT, G, Signal, exec, omarchy-launch-or-focus ^signal$ "uwsm-app -- signal-desktop"
+bindd = SUPER SHIFT, O, Obsidian, exec, omarchy-launch-or-focus ^obsidian$ "uwsm-app -- obsidian"
+bindd = SUPER SHIFT, W, Typora, exec, uwsm-app -- typora --enable-wayland-ime
+bindd = SUPER SHIFT, SLASH, Passwords, exec, uwsm-app -- 1password
+
+# If your web app url contains #, type it as ## to prevent hyprland treating it as a comment
+bindd = SUPER SHIFT, A, ChatGPT, exec, omarchy-launch-webapp "https://chatgpt.com"
+bindd = SUPER SHIFT ALT, A, Grok, exec, omarchy-launch-webapp "https://grok.com"
+bindd = SUPER SHIFT, C, Calendar, exec, omarchy-launch-webapp "https://app.hey.com/calendar/weeks/"
+bindd = SUPER SHIFT, E, Email, exec, omarchy-launch-webapp "https://app.hey.com"
+bindd = SUPER SHIFT, Y, YouTube, exec, omarchy-launch-webapp "https://youtube.com/"
+bindd = SUPER SHIFT ALT, G, WhatsApp, exec, omarchy-launch-or-focus-webapp WhatsApp "https://web.whatsapp.com/"
+bindd = SUPER SHIFT CTRL, G, Google Messages, exec, omarchy-launch-or-focus-webapp "Google Messages" "https://messages.google.com/web/conversations"
+bindd = SUPER SHIFT, P, Google Photos, exec, omarchy-launch-or-focus-webapp "Google Photos" "https://photos.google.com/"
+bindd = SUPER SHIFT, X, X, exec, omarchy-launch-webapp "https://x.com/"
+bindd = SUPER SHIFT ALT, X, X Post, exec, omarchy-launch-webapp "https://x.com/compose/post"
+
+# Aerospace-style window management (ALT as primary modifier)
+bind = ALT, H, movefocus, l
+bind = ALT, J, movefocus, d
+bind = ALT, K, movefocus, u
+bind = ALT, L, movefocus, r
+
+bind = ALT SHIFT, H, swapwindow, l
+bind = ALT SHIFT, J, swapwindow, d
+bind = ALT SHIFT, K, swapwindow, u
+bind = ALT SHIFT, L, swapwindow, r
+
+bind = ALT, Q, workspace, 1
+bind = ALT, W, workspace, 2
+bind = ALT, E, workspace, 3
+bind = ALT, R, workspace, 4
+bind = ALT, T, workspace, 5
+bind = ALT, Y, workspace, 6
+bind = ALT, U, workspace, 7
+bind = ALT, I, workspace, 8
+bind = ALT, O, workspace, 9
+bind = ALT, P, workspace, 10
+
+bind = ALT SHIFT, Q, movetoworkspace, 1
+bind = ALT SHIFT, W, movetoworkspace, 2
+bind = ALT SHIFT, E, movetoworkspace, 3
+bind = ALT SHIFT, R, movetoworkspace, 4
+bind = ALT SHIFT, T, movetoworkspace, 5
+bind = ALT SHIFT, Y, movetoworkspace, 6
+bind = ALT SHIFT, U, movetoworkspace, 7
+bind = ALT SHIFT, I, movetoworkspace, 8
+bind = ALT SHIFT, O, movetoworkspace, 9
+bind = ALT SHIFT, P, movetoworkspace, 10
+
+# Add extra bindings
+# bind = SUPER SHIFT, R, exec, alacritty -e ssh your-server
+bind = ALT, Space, exec, vicinae
+# ~/.config/hypr/hyprland.conf
+
+bind = ALT SHIFT, V, exec, vicinae vicinae://launch/clipboard/history
+bind = ALT SUPER, L, exec, vicinae vicinae://launch/browser-extension/browse-tabs
+
+# Overwrite existing bindings, like putting Omarchy Menu on Super + Space
+# unbind = SUPER, SPACE
+# bindd = SUPER, SPACE, Omarchy menu, exec, omarchy-menu
+
+# Logitech MX Keys
+# bind = SUPER SHIFT, S, exec, omarchy-capture-screenshot      # Print Screen Button
+# bind = SUPER, H, exec, voxtype record toggle                 # Dictation Button
+# bind = SUPER, PERIOD, exec, omarchy-launch-walker -m symbols # Emoji Button
