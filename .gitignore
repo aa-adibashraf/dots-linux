@@ -1,2 +1,4 @@
 .DS_Store
 **/.DS_Store
+#ignore the local hyprland looknfeel file
+/.config/hypr/looknfeel.local.conf
