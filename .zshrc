@@ -50,7 +50,7 @@ _fzf_comprun() {
   esac
 }
 
-source ~/fzf-git.sh/fzf-git.sh
+# source ~/fzf-git.sh/fzf-git.sh
 
 # source ~/.cargo/env
 
@@ -158,7 +158,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/adibashraf/.lmstudio/bin"
+# export PATH="$PATH:/Users/adibashraf/.lmstudio/bin"
 # End of LM Studio CLI section
 
 eval "$(starship init zsh)"
@@ -187,4 +187,4 @@ function transient-prompt() {
 }
 
 # Added by Antigravity
-export PATH="/Users/adibashraf/.antigravity/antigravity/bin:$PATH"
+# export PATH="/Users/adibashraf/.antigravity/antigravity/bin:$PATH"
